@@ -1,0 +1,35 @@
+run = "npm run dev"
+entrypoint = "public/index.html"
+
+hidden = [".config", "package-lock.json"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "npm run build && npm run start"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[languages]
+
+[languages.javascript]
+pattern = "**/*.{js,jsx}"
+
+[languages.javascript.languageServer]
+start = "typescript-language-server --stdio"
+
+[languages.typescript]
+pattern = "**/*.{ts,tsx}"
+
+[languages.typescript.languageServer]
+start = "typescript-language-server --stdio"
+
+[languages.html]
+pattern = "**/*.html"
+
+[languages.css]
+pattern = "**/*.css"
