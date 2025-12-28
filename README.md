@@ -207,6 +207,18 @@ npm install
 npm run dev
 ```
 
+### Replit Deployment
+
+You can deploy this project directly on Replit:
+
+1. **Fork to Replit**: Click the "Run on Replit" button or import the repository directly from GitHub
+2. **Configure Environment**: Set up your environment variables in the Replit Secrets tab
+3. **Run**: Click the "Run" button - the project will automatically install dependencies and start
+
+[![Run on Replit](https://replit.com/badge/github/GENEZUX/genesis-meta-studio-ai)](https://replit.com/github/GENEZUX/genesis-meta-studio-ai)
+
+The project includes `.replit` and `replit.nix` configuration files for seamless deployment.
+
 ## API Testing
 
 All endpoints are documented and testable. Use the following:
